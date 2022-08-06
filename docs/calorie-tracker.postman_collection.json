@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "5ca2f2af-1f05-45ee-bab5-e2d38027b38f",
+		"name": "calorie-tracker-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10521544"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "create-user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@gmail.com\",\r\n    \"password\": \"password@123\",\r\n    \"calorieLimit\": \"2100\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/create-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch-food-entries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/food-entries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"food-entries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-food-entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 4,\r\n    \"foodItem\": \"milk-shake\",\r\n    \"time\": \"2022-07-30T11:59:59.999Z\",\r\n    \"calorieCount\": \"200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/food-entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"food-entry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-food-entry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/food-entry/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"food-entry",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-food-entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"foodItem\": \"banana\",\r\n    \"time\": \"2022-07-30T11:59:59.999Z\",\r\n    \"calorieCount\": \"200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/food-entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"food-entry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-food-entry",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/food-entry/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"food-entry",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/admin/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"admin",
+								"report"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "report",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IkFkbWluIn0.HFn8y9Nkby-oEtbR7zeitbmZgjMIxgSxsEY_ofdytGk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3456/calorie-tracker-backend/admin/report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3456",
+									"path": [
+										"calorie-tracker-backend",
+										"admin",
+										"report"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"statusCode\": 200,\n    \"message\": \"Food entry read successfully.\",\n    \"response\": {\n        \"entriesAddedThisWeek\": 3,\n        \"entriesAddedPreviousWeek\": 6,\n        \"avgCaloriesPerUserThisWeek\": [\n            {\n                \"userId\": 1,\n                \"avgCalories\": \"4400.0000\"\n            },\n            {\n                \"userId\": 4,\n                \"avgCalories\": \"1200.0000\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "fetch-food-entries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/user/:userId/food-entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"user",
+								":userId",
+								"food-entry"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-food-entry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"foodItem\": \"banana\",\r\n    \"time\": \"2022-07-30T11:59:59.999Z\",\r\n    \"calorieCount\": \"200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/user/food-entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"user",
+								"food-entry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-calorie-limit",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"calorieLimit\": 2200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3456/calorie-tracker-backend/user/update-calorie-limit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3456",
+							"path": [
+								"calorie-tracker-backend",
+								"user",
+								"update-calorie-limit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3456/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3456",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
